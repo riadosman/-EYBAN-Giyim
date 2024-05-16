@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MdDelete } from "react-icons/md";
 import Link from "next/link";
 
-export default function cart() {
+export default function Cart() {
   const [cartItems, setcartItems] = useState();
   useEffect(() => {
     const keys = Object.keys(localStorage);
