@@ -3,31 +3,97 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --main-color: #d15345;
+  --secondry-color: #332a29;
+  --primary-color: #7c5652;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--secondry-color);
+  color: white;
+  overflow-x: hidden;
 }
-
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .fx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.c-bg {
+  width: 800px;
+  height: 90vh;
+  background-color: var(--main-color);
+  position: absolute;
+  right: -360px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.c1-bg {
+  width: 400px;
+  height: 400px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  left: -150px;
+  top: 700px;
+}
+.c2-bg {
+  width: 400px;
+  height: 400px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  right: -215px;
+  top: 1500px;
+}
+.c3-bg {
+  background-color: var(--main-color);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 50%;
+  right: 42%;
+  top: 280%;
+  z-index: -1;
+}
+.c4-bg {
+  width: 2000px;
+  height: 750px;
+  background: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: -300px;
+  left: -150px;
+}
+@media (max-width: 768px) {
+  .c-bg {
+    width: 300px;
+    height: 60vh;
+    right: 0;
+  }
+  .c1-bg {
+    width: 100px;
+    height: 100px;
+  }
+  .c2-bg {
+    width: 200px;
+    height: 200px;
+    right: 0;
+  }
+  .c3-bg {
+    right: 75%;
+    top: 150px;
+  }
+  .c4-bg {
+    width: 420px;
+    height: 620px;
   }
 }
